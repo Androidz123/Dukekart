@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/custom_actionbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/no_orders_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:background="@color/colorAccent"
+                android:padding="@dimen/_2sdp">
+                <RelativeLayout
+                    android:id="@+id/rl_Men"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:background="@color/white"
+                    android:layout_marginRight="@dimen/_1sdp">
+                    <ImageView
+                        android:id="@+id/ivMen"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"
+
+                        android:layout_centerHorizontal="true"
+                        />
+                    <TextView
+                        android:id="@+id/tvMen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivMen"
+                        android:text="Men"
+                        android:layout_centerHorizontal="true"/>
+                    <View
+                        android:id="@+id/view_men"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_2sdp"
+                        android:background="@color/colorRed"
+                        android:layout_below="@id/tvMen"
+                        android:layout_centerInParent="true"
+                        android:visibility="invisible"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_Women"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:background="@color/white"
+                    android:layout_marginLeft="@dimen/_1sdp">
+                    <ImageView
+                        android:id="@+id/ivWomen"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"
+
+                        android:layout_centerHorizontal="true"
+                        />
+                    <TextView
+                        android:id="@+id/tvWomen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivWomen"
+                        android:text="Women"
+                        android:layout_centerHorizontal="true"/>
+                    <View
+                        android:id="@+id/view_Women"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_2sdp"
+                        android:background="@color/colorRed"
+                        android:layout_below="@id/tvWomen"
+                        android:layout_centerInParent="true"
+                        android:visibility="invisible"/>
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/no_orders_layout"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    app:cardCornerRadius="0dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_Category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

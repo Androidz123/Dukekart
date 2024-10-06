@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/relative_feature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
+        <TextView
+            android:id="@+id/tv_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            style="@style/TextFieldBold"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="@string/featured_products" />
+
+
+        <TextView
+            android:id="@+id/tv_categoriesAll"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:text="Shop All"
+            android:layout_centerVertical="true"
+
+            android:gravity="center"
+            android:textSize="14sp"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:textColor="#0025DF"
+            android:layout_alignParentRight="true"/>
+<!--
+    android:background="@color/grey"
+ android:background="?attr/selectableItemBackground"
+   app:cardBackgroundColor="@color/grey"-->
+    </RelativeLayout>
+  <!--  <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+
+        android:layout_gravity="center"
+        android:elevation="5dp">-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+
+            android:orientation="vertical"
+            android:scrollbars="none"/>
+   <!-- </androidx.cardview.widget.CardView>-->
+    <ImageView
+        android:id="@+id/imgBannerB"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        android:adjustViewBounds="true"/>
+
+</LinearLayout>

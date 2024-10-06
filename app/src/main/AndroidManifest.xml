@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.location.gps" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--  <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        />
+      <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />-->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <!-- Required only if your app needs to access videos
+         that other apps created. -->
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+    <!-- Required only if your app needs to access audio files
+         that other apps created. -->
+<!--    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />-->
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29" />
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/app_icon"
+        android:supportsRtl="true"
+        tools:replace="android:theme"
+        android:theme="@style/AppTheme"
+        >
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <activity
+            android:name="com.dukeKart.android.activity.OrderTrack"
+            android:exported="true" />
+        <activity
+            android:name=".Payment.NewWebViewActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+
+        <activity
+            android:name="com.dukeKart.android.activity.TrackOrders"
+            android:exported="true" />
+
+        <activity
+            android:name="com.dukeKart.android.activity.NewPassword"
+            android:exported="true" />
+
+        <activity
+            android:name="com.dukeKart.android.activity.SubProductCategory"
+            android:exported="true" />
+         <activity
+            android:name="com.dukeKart.android.activity.SubSubProductCategory"
+            android:exported="true" />
+
+        <activity
+            android:name="com.dukeKart.android.activity.AllCategory"
+            android:exported="false" />
+
+        <activity
+            android:name="com.dukeKart.android.activity.OrderDetails"
+            android:exported="true" />
+
+        <activity
+            android:name="com.dukeKart.android.activity.OrderList"
+            android:exported="true" />
+
+        <activity
+            android:name="com.dukeKart.android.activity.OrderPlaced"
+            android:exported="true" />
+
+        <activity
+            android:name="com.dukeKart.android.activity.ShipAddress"
+            android:exported="true" />
+
+        <activity
+            android:name="com.dukeKart.android.activity.CheckOut"
+            android:exported="true" />
+        <activity
+            android:name="com.nandroidex.upipayments.ui.PaymentsUIActivity"
+            android:exported="true">
+        </activity>
+
+
+        <activity
+            android:name="com.dukeKart.android.activity.AddToCart"
+            android:exported="true" />
+
+        <activity
+            android:name="com.dukeKart.android.activity.AllProducts"
+            android:exported="true" />
+
+        <activity
+            android:name="com.dukeKart.android.activity.SearchProducts"
+            android:exported="true" />
+
+        <activity
+            android:name="com.dukeKart.android.activity.FullScreenImage"
+            android:exported="true" />
+
+        <activity
+            android:name="com.dukeKart.android.activity.AddAddress"
+            android:exported="true" />
+
+        <activity
+            android:name="com.dukeKart.android.activity.ProductDetails"
+            android:exported="true" />
+
+        <activity
+            android:name="com.dukeKart.android.activity.ProductCategory"
+            android:exported="true" />
+
+        <activity
+            android:name="com.dukeKart.android.activity.Account"
+            android:exported="true" />
+
+        <activity
+            android:name="com.dukeKart.android.activity.OtpVerification"
+            android:exported="true" />
+
+        <activity
+            android:name="com.dukeKart.android.activity.ForgotPassword"
+            android:exported="true" />
+
+        <activity
+            android:name="com.dukeKart.android.activity.Register"
+            android:exported="true" />
+
+        <activity
+            android:name="com.dukeKart.android.activity.Login"
+            android:exported="true" />
+
+        <activity
+            android:name="com.dukeKart.android.activity.Dashboard"
+            android:exported="true" />
+
+        <activity
+            android:name="com.dukeKart.android.Splash"
+            android:exported="true"
+
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_live_5qe9rH0cjV376l" />
+        <service
+            android:name="com.dukeKart.android.firebase.MyMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.razorpay.CheckoutActivity"
+            android:exported="true">
+
+        </activity>
+        <receiver
+            android:name="com.razorpay.RzpTokenReceiver"
+            android:exported="true">
+            <!-- Other receiver attributes -->
+        </receiver>
+    </application>
+    <queries>
+        <package android:name="com.google.android.apps.nbu.paisa.user" />
+        <package android:name="com.phonepe.app" />
+        <!--            <package android:name="com.whatsapp" />-->
+        <package android:name="net.one97.paytm" />
+        <package android:name="in.amazon.mShop.android.shopping" />
+        <!--            <package android:name="com.phonepe.app" />-->
+        <!--            <package android:name="in.amazon.mShop.android.shopping" />-->
+                    <package android:name="in.org.npci.upiapp" />
+    </queries>
+</manifest>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/main_layout"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/include3"
+        layout="@layout/custom_actionbar" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/include3"
+        android:background="@color/white">
+
+
+        <LinearLayout
+            android:id="@+id/ll_tab"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center">
+            <!-- our tablayout to display tabs  -->
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabSelectedTextColor="@color/colorAccent"
+                app:tabIndicatorColor="@color/colorAccent"
+                android:background="@color/colorBlackTransparent"
+                style="@style/TabLayout"
+                app:tabIndicatorHeight="2dp"
+                app:tabTextColor="@color/text_color"
+                app:tabPaddingStart="15dp"
+                android:minHeight="40dp"
+                android:scrollbars="vertical"
+                app:tabMode="scrollable"
+                app:tabPaddingEnd="15dp"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicator="@color/colorAccent"/>
+
+        </LinearLayout>
+        <!-- View pager to swipe views -->
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_Account"
+            android:layout_below="@+id/ll_tab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

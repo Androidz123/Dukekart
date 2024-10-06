@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.OrderTrack"
+    android:orientation="vertical">
+    <include layout="@layout/custom_actionbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <com.transferwise.sequencelayout.SequenceLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+       >
+
+            <com.transferwise.sequencelayout.SequenceStep
+                android:id="@+id/step1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingTop="4dp"
+                app:title="Order Placed"/>
+
+            <com.transferwise.sequencelayout.SequenceStep
+                android:id="@+id/step2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingTop="4dp"
+                app:title=" Order Confirmed by seller"/>
+
+            <com.transferwise.sequencelayout.SequenceStep
+                android:id="@+id/step3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingTop="4dp"
+                app:title="Order shipped"
+                />
+
+            <com.transferwise.sequencelayout.SequenceStep
+                android:id="@+id/step4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingTop="4dp"
+                app:title="Order delivered"/>
+
+
+            <LinearLayout
+                android:id="@+id/ll_trackorder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@color/colorAccent"
+                android:elevation="@dimen/_160sdp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_gravity="end|bottom"
+                android:layout_marginRight="@dimen/_25sdp"
+                android:layout_alignParentRight="true"
+                android:layout_toLeftOf="@+id/textView60"
+                android:layout_toStartOf="@+id/textView60"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Track List"
+                    android:textStyle="bold"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+        </com.transferwise.sequencelayout.SequenceLayout>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

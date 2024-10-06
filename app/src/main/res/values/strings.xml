@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">DukeKart</string>
+    <string name="home">Home</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="order_history">Order History</string>
+    <string name="account">Account</string>
+    <string name="please_wait">Please Wait</string>
+    <string name="shopmet_login">DukeKart Login</string>
+    <string name="login_to_your">Login </string>
+
+    <string name="register_mobile_number">Registered Mobile Number</string>
+    <string name="enter_mobile_no">Your Mobile No.</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="verification_code">Verification Code</string>
+    <string name="didntRecieveTheCode">Didn\'t receive the code?</string>
+    <string name="resend">Resend</string>
+    <string name="featured_products">Popular Products</string>
+    <string name="top_best_selling">Top Best Selling</string>
+    <string name="your_shopping_cart_is_empty">Your shopping cart is empty</string>
+    <string name="continue_to_shopping">Continue To Shopping</string>
+    <string name="remove_coupon">Remove Coupon</string>
+    <string name="shippingAddress">Shipping Address:</string>
+
+    <string name="youAreNotUpdatedTitle">Update Available</string>
+    <string name="youAreNotUpdatedMessage">A new version of DukeKart is available. Please update to version\s</string>
+    <string name="youAreNotUpdatedMessage1">\s now</string>
+    <string name="update">Update</string>
+    <string name="close">Close</string>
+    <string name="trailVersionExpire">Trail Version Expired</string>
+    <string name="trailVersionExpireMessage">"Version expired on "</string>
+    <string name="contactYourServiceProvider">Contact your service provider to continue</string>
+    <string name="applicationBlocked">Application Blocked</string>
+    <string name="applicationError">Application Error</string>
+    <string name="search_articles_hint">Type Here..\n</string>
+
+</resources>

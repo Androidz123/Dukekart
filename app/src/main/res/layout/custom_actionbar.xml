@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:padding="8dp"
+    android:layout_height="?actionBarSize">
+
+    <!--    android:background="@color/colorAccent"-->
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/ic_back"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:tint="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/iv_back"
+        android:text="@string/app_name" />
+
+    <ImageView
+        android:id="@+id/iv_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="@dimen/_35sdp"
+        android:background="?attr/selectableItemBackground"
+        android:padding="@dimen/_5sdp"
+        android:scaleType="fitCenter"
+        android:visibility="visible"
+        app:srcCompat="@drawable/ic_search"
+        app:tint="@color/colorPrimary" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:src="@drawable/ic_shopping_cart"
+            app:tint="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tvCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:minWidth="@dimen/_12sdp"
+            android:background="@drawable/round_corner"
+            android:gravity="center"
+            android:padding="@dimen/_2sdp"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_6sdp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</RelativeLayout>

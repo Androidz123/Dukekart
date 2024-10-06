@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "372530142372",
+    "project_id": "dukekart-d2d1f",
+    "storage_bucket": "dukekart-d2d1f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:372530142372:android:21d59b02ab6951803b9a31",
+        "android_client_info": {
+          "package_name": "com.dukeKart.android"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMpiR0Dhze01sY3CviJ8B-yq8t3s0SWfs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
